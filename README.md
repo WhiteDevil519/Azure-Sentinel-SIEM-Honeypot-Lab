@@ -61,14 +61,9 @@ Raw Windows security events were transformed into context-rich security data:
 - Enriched logs with **geolocation data** (latitude, longitude, country) via an external API.
 - Stored enriched output in a custom log file for SIEM ingestion.
 - Parsed and structured data using custom **KQL queries**.
-- Run this KQL query in Sentinel:
-SecurityEvent
-| where  TimeGenerated > ago(1h)
-| take 20
-- If you see Event IDs like 4624 and 4625, you're connected.
-  
+- Run  KQL query in Sentinel:
 <img width="1634" height="808" alt="image" src="https://github.com/user-attachments/assets/e3c141a8-bca8-40e2-980e-6025266d4850" />
-
+-  If you see Event IDs like 4624 and 4625, you're connected.
 
 ---
 
