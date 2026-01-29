@@ -10,6 +10,8 @@ The primary goal was to design and implement a **high-visibility Azure Sentinel 
 
 <img width="1442" height="756" alt="image" src="https://github.com/user-attachments/assets/0c8259ef-3b2b-48fd-9d64-c602a4cab1e0" />
 
+<img width="1177" height="547" alt="Windows VM Attack Map" src="https://github.com/user-attachments/assets/ec15bfa9-7618-4e20-9579-8200fec52fdf" />
+
 ---
 
 ## 🧠 Skills Gained
