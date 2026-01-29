@@ -78,8 +78,6 @@ Raw Windows security events were transformed into context-rich security data:
 
 - Developed KQL queries to aggregate attack data by source location.
 - Created **watchlists** and built an interactive **attack map workbook** for visualization.
-<img width="1617" height="607" alt="image" src="https://github.com/user-attachments/assets/ea6e7ad7-e56c-4a43-8311-93e3f60799bf" />
-
 **attack map workbook**
 <img width="1629" height="454" alt="image" src="https://github.com/user-attachments/assets/dac7b553-4bf0-4a1f-b797-139fed0b7250" />
 
@@ -87,7 +85,7 @@ Raw Windows security events were transformed into context-rich security data:
 ## 🔍 IP Enrichment with Geolocation (Watchlist)
 
 To add geographical context to failed authentication events, a **custom GeoIP watchlist** was uploaded and joined with Windows security logs. This allowed enrichment of attacker IPs with location metadata such as city, country, latitude, and longitude.
-
+<img width="1617" height="607" alt="image" src="https://github.com/user-attachments/assets/ea6e7ad7-e56c-4a43-8311-93e3f60799bf" />
 
 ### Phase 4: Detection Engineering
 To operationalize the lab:
