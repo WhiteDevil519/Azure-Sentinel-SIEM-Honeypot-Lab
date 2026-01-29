@@ -84,6 +84,23 @@ Raw Windows security events were transformed into context-rich security data:
 <img width="1629" height="454" alt="image" src="https://github.com/user-attachments/assets/dac7b553-4bf0-4a1f-b797-139fed0b7250" />
 
 ---
+## 🔍 IP Enrichment with Geolocation (Watchlist)
+
+To add geographical context to failed authentication events, a **custom GeoIP watchlist** was uploaded and joined with Windows security logs. This allowed enrichment of attacker IPs with location metadata such as city, country, latitude, and longitude.
+
+### 🧠 KQL: Enrich Failed Login Events with GeoIP Data
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent
+| where EventID == 4625
+| order by TimeGenerated desc
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network);
+WindowsEvents
+| project TimeGenerated, Computer, AttackerIp = IpAddress, cityname, countryname, latitude, longitude
+
+
+
+
 
 ### Phase 4: Detection Engineering
 To operationalize the lab:
