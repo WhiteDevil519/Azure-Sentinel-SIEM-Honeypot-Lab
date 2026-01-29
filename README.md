@@ -88,10 +88,6 @@ Raw Windows security events were transformed into context-rich security data:
 
 To add geographical context to failed authentication events, a **custom GeoIP watchlist** was uploaded and joined with Windows security logs. This allowed enrichment of attacker IPs with location metadata such as city, country, latitude, and longitude.
 
-### 🧠 KQL: Enrich Failed Login Events with GeoIP Data
-
-
-
 
 ### Phase 4: Detection Engineering
 To operationalize the lab:
