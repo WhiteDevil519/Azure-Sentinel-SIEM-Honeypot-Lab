@@ -78,7 +78,7 @@ Raw Windows security events were transformed into context-rich security data:
 
 - Developed KQL queries to aggregate attack data by source location.
 - Created **watchlists** and built an interactive **attack map workbook** for visualization.
-**attack map workbook**
+
 <img width="1629" height="454" alt="image" src="https://github.com/user-attachments/assets/dac7b553-4bf0-4a1f-b797-139fed0b7250" />
 
 ---
