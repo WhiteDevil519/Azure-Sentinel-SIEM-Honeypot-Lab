@@ -34,17 +34,22 @@ The primary goal was to design and implement a **high-visibility Azure Sentinel 
 ### Phase 0: Environment Provisioning
 To establish the lab foundation, Azure resources were provisioned to support centralized logging and attack monitoring:
 - Deployed a **Windows 10 Pro virtual machine** as a high-exposure target system.
+<img width="1385" height="468" alt="image" src="https://github.com/user-attachments/assets/8a1a223b-a3db-4931-b653-eb08b8f44ab4" />
+
 - Created a dedicated **Log Analytics Workspace (LAW)** to retain telemetry independently of the endpoint state.
+<img width="1904" height="397" alt="image" src="https://github.com/user-attachments/assets/2306e84f-ce33-440d-8f04-35be4d959752" />
+
 - Configured Azure Resource Groups and Virtual Network components.
-
-<img width="1385" height="468" alt="image" src="https://github.com/user-attachments/assets/0208e7a1-3726-41a7-b5b8-e594d9101e2e" />
-
+<img width="1909" height="400" alt="image" src="https://github.com/user-attachments/assets/436c4a7e-891e-4679-b6b4-09f2cceaacca" />
 
 ---
 
 ### Phase 1: Attack Surface Configuration
 To ensure sufficient attack telemetry, the security posture of the VM was intentionally weakened:
 - Configured **Network Security Group (NSG)** rules to allow unrestricted inbound traffic.
+<img width="1386" height="847" alt="image" src="https://github.com/user-attachments/assets/988156f5-f735-43e5-a750-d2605ea6c8fe" />
+
+  
 - This controlled exposure was used strictly for lab purposes to attract automated scanners and botnet activity.
 
 ---
