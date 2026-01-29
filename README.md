@@ -34,7 +34,7 @@ The primary goal was to design and implement a **high-visibility Azure Sentinel 
 
 ### Phase 0: Environment Provisioning
 To establish the lab foundation, Azure resources were provisioned to support centralized logging and attack monitoring:
-- Deployed a **Windows 10 Pro virtual machine** as a high-exposure target system.
+- Deployed a **Windows 11 Pro virtual machine** as a high-exposure target system.
 <img width="1385" height="468" alt="image" src="https://github.com/user-attachments/assets/8a1a223b-a3db-4931-b653-eb08b8f44ab4" />
 
 - Created a dedicated **Log Analytics Workspace (LAW)** to retain telemetry independently of the endpoint state.
@@ -61,7 +61,9 @@ Raw Windows security events were transformed into context-rich security data:
 - Enriched logs with **geolocation data** (latitude, longitude, country) via an external API.
 - Stored enriched output in a custom log file for SIEM ingestion.
 - Parsed and structured data using custom **KQL queries**.
-- Run  KQL query in Sentinel:
+<img width="1636" height="846" alt="image" src="https://github.com/user-attachments/assets/bc90a2e3-fea4-48d7-b083-2c9f67c6a729" />
+
+- - Run below KQL query in Sentinel:
 <img width="1634" height="808" alt="image" src="https://github.com/user-attachments/assets/e3c141a8-bca8-40e2-980e-6025266d4850" />
 -  If you see Event IDs like 4624 and 4625, you're connected.
 
@@ -69,21 +71,35 @@ Raw Windows security events were transformed into context-rich security data:
 
 ### Phase 3: SIEM Integration & Analytics
 - Configured **Data Collection Rules (DCRs)** to ingest custom logs into Microsoft Sentinel.
+<img width="1807" height="352" alt="image" src="https://github.com/user-attachments/assets/d8eaca2f-4f14-4a9e-a822-b60a476bbe98" />
+
+
 - Developed KQL queries to aggregate attack data by source location.
 - Created **watchlists** and built an interactive **attack map workbook** for visualization.
+<img width="1617" height="607" alt="image" src="https://github.com/user-attachments/assets/ea6e7ad7-e56c-4a43-8311-93e3f60799bf" />
+
+**attack map workbook**
+<img width="1629" height="454" alt="image" src="https://github.com/user-attachments/assets/dac7b553-4bf0-4a1f-b797-139fed0b7250" />
 
 ---
 
 ### Phase 4: Detection Engineering
 To operationalize the lab:
 - Designed an **anomaly-based analytics rule** in Sentinel.
+<img width="1591" height="716" alt="image" src="https://github.com/user-attachments/assets/a63a4a07-087d-498a-a2c5-b853b331246c" />
+
 - Enabled alerting on abnormal authentication patterns indicative of brute-force behavior.
+<img width="1912" height="681" alt="image" src="https://github.com/user-attachments/assets/e52d1e3b-2346-4de2-83a2-70fd4ac5223a" />
+
 
 ---
 
 ## 🌍 Observations & Findings
 - The exposed VM began receiving attack traffic **within minutes** of firewall rule changes.
-- A significant concentration of brute-force attempts originated from **Jordanów (Poland)**, followed by regions in the **Netherlands** and **Argentina**.
+- A significant concentration of brute-force attempts originated from **Jordanów (Poland)**, followed by regions in the **Netherlands** and **Prague**.
+  **Attack map**
+  <img width="1118" height="601" alt="image" src="https://github.com/user-attachments/assets/f1bc03ac-4c62-47e5-a515-e1733937f3de" />
+
 - Repeated credential-stuffing attempts targeted default administrative accounts, highlighting common attacker automation techniques in cloud environments.
 
 ---
