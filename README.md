@@ -8,6 +8,7 @@ This project focuses on building a **cloud-native SIEM honeypot** using **Micros
 ## 🎯 Project Objective
 The primary goal was to design and implement a **high-visibility Azure Sentinel SIEM lab** that captures live attack telemetry, enriches raw security logs with contextual data, and visualizes attacker behavior across different geographies. This project bridges theoretical SOC concepts with practical, real-world implementation.
 
+<img width="1442" height="756" alt="image" src="https://github.com/user-attachments/assets/0c8259ef-3b2b-48fd-9d64-c602a4cab1e0" />
 
 ---
 
