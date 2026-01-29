@@ -98,8 +98,7 @@ To operationalize the lab:
 - The exposed VM began receiving attack traffic **within minutes** of firewall rule changes.
 - A significant concentration of brute-force attempts originated from **Jordanów (Poland)**, followed by regions in the **Netherlands** and **Prague**.
 
-- 
-  **Attack map**
+ ##  **Attack map**
   <img width="1118" height="601" alt="image" src="https://github.com/user-attachments/assets/f1bc03ac-4c62-47e5-a515-e1733937f3de" />
 
 - Repeated credential-stuffing attempts targeted default administrative accounts, highlighting common attacker automation techniques in cloud environments.
